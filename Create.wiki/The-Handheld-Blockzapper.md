@@ -1,79 +1,79 @@
-Filling Holes, Stacking walls, Replacing facades, Drawing paths, Making patterns, ...
-There are plenty of uses for this rather powerful gadget. 
+填坑，搭墙，替换墙面，规划路线，特定样式放置方块，...
+这一用途广泛的方块放置器可以帮助你完成各式各样的工作。
 
-With its configuration and upgrades, the **Handheld Blockzapper** can place and replace blocks at a distance.
-* Start by [**Left-Clicking**] a Block within range to set it as the currently selected target Material.  
-The tool will try to use this selected block for placing or exchanging.
-* [**Right-Click**] while **Sneaking** to open the configuration screen.  
-Here you can adjust whether to place or replace blocks, an area of effect, the pattern placed, and other settings.
-* Once you're finished configuring, close the screen and [**Right-Click**] at blocks within range.  
-The targeted blocks will be replaced or covered by the block you chose.
-
-
-## Configuration
-![Configuration](https://i.imgur.com/d2Vb1Z0.png)
-
-Hover over the different Buttons to see what they control.
-* **Replace Mode** controls, whether the tool should act like a Block Exchanger, or a placement tool.  
-When enabled, the surface shot at by the beam will be replaced by the selected material on the left.  
-Otherwise, it will simply extend the surface outwards, placing the selected material on the surface.  
-_**Note**: When replace mode is active, the tool will break and drop the previous blocks. If you upgrade the **Body** of the tool, you will be able to replace blocks with higher hardness levels._
-
-* If **Follow Diagonals** is enabled, and the tool is able to have an area of effect,  
-blocks which are only diagonally reachable will also be considered as the surface.
-* If **Ignore Material Borders** is enabled, and the tool is able to have an area of effect,  
-block which are of the same surface but a different material will also be considered as the effective surface.
-
-* [**Scroll**] on the **Spread Distance** input to adjust the area of effect for this tool.  
-_**Note**: Without upgraded **Amplifiers** the tool will only be able to place one block at a time._
-
-* **Patterns** can define a certain condition under which blocks are placed.   
-This is especially effective when using the tool with an upgraded area of effect.  
-**Solid Material** is the default pattern and will place blocks in every position.  
-**Checkerboard** only places blocks in every other space, creating a checkered surface.  
-**% Roll** will randomize whether to place a block or not, there are three percentiles to choose from.
+**手持方块放置器** 可以放置以及替换一定范围内的方块，同时它还有着高自定义性以及可升级性。
+*  首先，[**左键单击**] 一个在你周围的方块，将其选中为放置材料。
+方块放置器会尝试使用你所选定的方块进行接下来的放置以及替换方块的工作。
+* **潜行时**[**右键单击**] 方块放置器，可以打开它的配置界面。
+在这里你可以调整方块放置器的工作（放置/替换）模式，生效区域，放置样式，以及其它的一些设置。
+* 当你配置好了你的方块放置器，只需关闭配置界面， [**右键点击**] 一定范围内的方块，
+你就可以替换这一方块，或者在这个方块上放置另一个方块。
 
 
-## Upgrades
-There are five traits to a Handheld Blockzapper, which you can improve by upgrading it:  
-(All recipes can be viewed in JEI, press 'U' hovering a blockzapper item)
+## 配置
+![配置](https://i.imgur.com/d2Vb1Z0.png)
 
----
-### Area of Effect (Amplifier)
-Increases the amount of blocks modified by one shot.
-* Default: Max area of effect is **1x1**.
-* Using **Brass**: Allows a max Area of **5x5** (3m Radius)  
-* Using **Chromatic Compound**: Allows a max Area of **13x13** (7m Radius) 
+将鼠标悬停在各个按钮上，你可以查看这一按钮的用途。
+* **替换模式** 切换，控制这一方块放置器是否为替换方块模式，就像是一些mod的方块替换器一样。
+当开启时，被方块放置器射出的光线击中表面的方块，会被替换为方块放置器图标左边的方块。
+关闭时，方块放置器只会简单地向外拓展这一表面，在这一表面上放置方块。  
+_**注意**：当替换模式启用后，方块放置器会破坏替换前的方块，这些方块将会以掉落物的形式出现。如果你升级了方块放置器的 **机体**，你就可以替换那些硬度更高的方块了。_
+
+* 如果 **对角线延伸** 按钮被启用，且方块放置器有一个可生效的区域，
+那些只是在对角线上相邻的方块也会被算作是一个表面。
+* 如果 **忽视材料分界** 按钮被启用，且方块放置器有一个可生效的区域，
+同一面但种类不同的方块会被算作一个相同的表面。
+
+* 在 **延伸范围** 上滑动[**滚轮**]，可以调整方块放置器生效的区域大小。
+_**注意**：若没有升级方块放置器的 **增大** 部件，方块放置器一次性只能放置一个方块。_
+
+* **样式** 可以定义一些特定的条件，来控制方块放置器会在哪些方块上生效。
+在升级了方块放置器的生效范围后，样式功能将会发挥出惊人的效果。
+**实心** 是默认样式，它会在区域内的所有位置上生效。
+**棋盘** 样式会让方块放置器每隔一个方块生效一次，最终的效果看上去犹如一个棋盘。 
+**% 随机** 会对区域内的每个方块进行随机选择是否生效的操作，有三种不同的几率供你选择、
+
+
+## 升级
+方块放置器有五种可供升级的选择：
+(所有的配方都可以在JEI内查到，对着方块放置器按下 'U' 键即可。)
 
 ---
-### Speed (Accelerator)
-Increases the amount of shots fired per second. Holding down [**Right-Click**] will repeat shots.  
-* Default: **~2 Beams** per second
-* Using **Brass**: **~3 Beams** per second
-* Using **Chromatic Compound**: **~10 Beams** per second  
-_Your measurements may differ due to server latencies_
+### 生效范围 (增大)
+提升方块放置器一次性生效的方块数量。
+* 默认：最大生效范围为 **1x1**.
+* **黄铜**升级：最大范围提升至 **5x5** (3m 半径)  
+* **异彩化合物**升级：最大范围提升至 **13x13** (7m 半径) 
 
 ---
-### Range (Scope)
-Increases the distance at which blocks can be manipulated.
-* Default: Max range of **15m**  
-* Using **Brass**: Max range of **30m**  
-* Using **Chromatic Compound**: Max range of **100m**  
+### 速度 (加速)
+提升每秒可射击次数，按住 [**右键**] 可以重复射击 
+* 默认：每秒 **~2 次**
+* **黄铜**升级：每秒 **~3 次** 
+* **异彩化合物**升级：每秒 **~10 次**  
+_由于服务器延迟，测试结果可能会稍有不同_
 
 ---
-### Strength (Body)
-When in **Replace Mode**, determines the maximum hardness of the blocks to be replaced.
-* Default: Max allowed Hardness: 2 (Soil, Wood, Stone)
-* Using **Brass**: Max allowed Hardness: 5 (Ores, Metal Blocks)
-* Using **Chromatic Compound**: Anything Breakable (Obsidian, ...)  
-
-In Creative Mode, any block can be replaced.
+### 距离 (范围)
+提升最远可操控的方块的距离
+* 默认： 最大距离为**15m**  
+* **黄铜**升级：最大距离为**30m**  
+* **异彩化合物**升级：最大距离为**100m**  
 
 ---
-### Block Collection (Retriever)
-When in **Replace Mode**, these upgrades will automatically relocate the dropped items.
-* Default: Block Drops will not be relocated
-* Using **Brass**: Dropped items will be relocated to the players position.
-* Using **Chromatic Compound**: Dropped items will be placed in the players inventory.
+### 力量 (机体)
+在 **替换模式**下，这一属性决定了放置器可以破坏的方块的最高硬度。
+* 默认： 最大可破坏硬度： 2 (泥土，木头，石头)
+* **黄铜**升级：最大可破坏硬度： 5 (矿石，金属块)
+* **异彩化合物**升级：任何东西都可以破坏 (黑曜石， ...)  
 
-In Creative Mode, replaced blocks will not drop items.
+在创造模式下，任何方块都可以被替换。
+
+---
+### 方块采集 (回捡)
+在 **替换模式**下，这一升级可以自动重定位掉落的物品位置。
+* 默认： 掉落物不会被重定位
+* **黄铜**升级：掉落物会被重定位为玩家的位置
+* **异彩化合物**升级：掉落物会被直接捡回玩家背包
+
+创造模式下，替换模式不会产生掉落物。

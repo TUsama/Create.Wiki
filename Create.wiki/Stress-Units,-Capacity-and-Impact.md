@@ -1,33 +1,32 @@
 ![](https://i.imgur.com/E3wHL9a.jpg)
 
-### Stress
+### 应力
 
-Now that we have [[Rotation|Generate and Convey]] and [[Speed|Changing Gears]] covered we need to talk about the last important mechanic: _Stress_. Stress is Create's simplified implementation of torque that allows for some balancing around rotation. To understand stress, we have to split components into 2 groups, _Generators_ and _Consumers_. Generators have a certain _Stress Capacity_ associated with them, while Consumers have a _Stress Impact_. As long as the total capacity of a system is greater or equal to the total impact the system will turn and all components will work. If however the total stress impact gets to large, the system will Overstress preventing all components from working. This state persists until either the impact gets lowered or some capacity added.
+到了这里，我们已经介绍了大量关于 [[旋转|Generate and Convey]] 以及 [[转速|Changing Gears]] 的相关内容，接下来我会为你介绍本mod中最后一个重要机制： _应力_。应力是机械动力对于扭矩的一种简化实现方式，在实际应用中可以平衡旋转系统出现的一些问题。要想理解应力，我们需要将组件分为两个门类： _应力产生装置_ 以及 _应力消耗装置_。每个应力产生装置都会产出特定的 _应力量_ ，而应力消耗装置则由其对应的 _应力影响值_。只要系统的总应力量大于或者等于系统的总应力影响值，系统就能正常运转 ，各组件也能正常工作。但是，如果系统的总应力影响值大于了总应力量，那么系统会超载，所有的组件都会停止工作。只有当总应力值大于或者等于应力影响值时，系统才能恢复生产。
+### SU以及转速
 
-### SU and Speed
+组件的应力影响值也会受到其转速的影响。所有的组件都有一个 _基础值_，这一基础值指的是 _1 RPM_ 的转速所产生的应力值/应力影响。想要获取特定部件对系统的有效应力值/应力影响，你需要将基础值乘以其转速。举个例子，一个水车 (基础值为 4 SU)以 5 RPM 的转速运行，它会给系统产生总计20 SU的应力值；而以10 RPM转速旋转，则会产生40 SU的应力值。消耗装置遵循着一样的逻辑：一个粉碎轮以20 RPM的转速运行，将会对系统产生160 SU的应力影响值。
 
-The amount of Stress a component has also scales with its current speed. All components have a certain _Base Value_, which refers to a speed of _1 RPM_. To get the effective impact or capacity all you need to do is multiply that base value by its current speed. For example a water wheel (base value of 4 SU) turning at 5 RPM will add a total of 20 SU of capacity to the system, while the same wheel turning at 10 RPM will add 40 SU. The same logic applies to consumers: A crushing wheel running at 20 RPM adds 160 SU of impact to the system.
+一般来说，一些组件 **只能传递** 旋转能，例如传动杆以及齿轮，对系统完全**没有应力影响**。由此，预测总消耗装置所需的总产生装置数量变得更加简单，你还可以出于美观的目的将机器与产生装置分隔开，这不会有任何的损失。
 
-By default, components used **only for relaying** rotational power, such as shafts and cogwheels, have **no stress impact** at all. This makes predicting the amount of generators required for your contraptions much simpler and prevents punishment for aesthetic detours between machines and generators.
+### 范例
 
-### Quick Example
-
-In the end this means that if you want to run 2 crushing wheels you'll need 4 water wheels running at the same speed or you can get away with just a single one if you slow down the crushers to a quarter of its speed instead. Read more about changing speeds [[here|Changing Gears]]
+我们来看一个例子（0.1版本的例子）：假设你想要运行一对粉碎轮，你需要四架水车为其供能，你也可以降低每个粉碎轮的转速至四分之一，这样你就只需要一架水车了。在 [[这里|Changing Gears]] 你可以参看到更多关于改变转速的细节。
 
 ***
 
-### Goggles and Gauges
+### 工程师护目镜以及表盘
 
-Optimizing stress impact and comparing net capacity of sources at base speed can become quite scientific. For those who are interested in seeing some actual numbers and more exhaustive information, it is recommended to look into crafting a pair of Goggles and a Stress Gauge:
+仔细优化你的消耗装置摆放，认真比对应力产生装置的总产能以及以基础值运行的消耗装置的总消耗，这才是科学的发展模式。对于那些想要查看各装置的准确数值以及详细信息的人，我推荐你制造一副工程师护目镜，以及应力表：
 
-Stats of a water wheel turning at 10 RPM: 
+处于10 RPM转速状态下的水车：
 
 ![](https://cdn.discordapp.com/attachments/622867820170182676/690314163590791560/unknown.png)
 
-Stats of a crushing wheel working at 20 RPM:
+处于20 RPM状态下工作的粉碎轮：
 
 ![](https://cdn.discordapp.com/attachments/622867820170182676/690314182679461978/unknown.png)
 
-Example of a stress gauge on a busy network:
+应力表在工作网络中的使用例：
 
 ![](https://cdn.discordapp.com/attachments/622867820170182676/690179829395488996/unknown.png)
